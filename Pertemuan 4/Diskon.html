@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Hitung Diskon dengan If And</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Program Hitung Diskon Zhida</h2>
+        <label>Total Belanja</label>
+        <input type="number" id="totalBelanja" value="600000">
+        <br><br> 
+        <label>Member:</label>
+        <select id="member">
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+        </select>
+        <br><br> 
+        <button onclick="cekDiskon()">Cek Diskon</button</button>
+        <div id=hasil></div>
+    </div>
+    <script>
+        function cekDiskon() {
+            let totalBelanja = document.getElementById("totalBelanja").value;
+            let member = document.getElementById("member").value;
+
+            if (totalBelanja >=500000 && member == "Ya") {
+                document.getElementById("hasil").innerHTML = "Diskon 10%";
+            } else {
+                document.getElementById("hasil").innerHTML = "Tidak Diskon";
+            }
+        }
+    </script>
+</body>
+</html>
