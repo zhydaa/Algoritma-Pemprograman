@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Login Sistem dengan IF AND</title>
+</head>
+<body>
+    <h2>Login Sistem</h2>
+    <label>Username:</label><br><br>
+    <input type="text" id="username"><br><br>
+    <label>Password:</label><br>
+    <input type="password" id="password"><br><br>
+    <button onclick="login()">Login</button>
+    <p id="hasil"></p>
+    <script>
+        function login(){
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username == "admin" && password == "admin123") {
+                window.location.href = "admin.html";
+            } else if (username == "dosen" && password == "dosen111") {
+                window.location.href = "dosen.html";
+            } else if (username == "mahasiswa" && password == "mahasiswa123"){
+                window.location.href = "mahasiswa.html";
+            } else {
+                document.getElementById("hasil").innerHTML = 
+                    "Username atau password salah.";
+            }
+            }
+    </script>
+</body>
+</html> 
